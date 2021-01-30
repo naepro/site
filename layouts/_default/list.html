@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  {{ partial "head.html" . }}
+  <title>苗ぷろ。</title>
+  <meta property="og:title" content="2001Y.me｜2001YがWebやガジェットなどから写真まで、好きなことばかり書くブログ" />
+  <meta name="description" content="2001YがWebやガジェットなどから写真まで、好きなことばかり書くブログです。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://2001y.me" />
+  <meta property="og:description" content="2001YがWebやガジェットなどから写真まで、好きなことばかり書くブログです。">
+</head>
+<body ontouchstart>
+  {{ partial "header.html" . }}
+  <main>
+      <section id=one >
+        <div>
+          女子学生に<br>ウェルネスを
+        </div>
+      </section>
+    <section id=three>
+      <section>
+        <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        {{ .Content }}
+      </section>
+    </section>
+  </main>
+  <footer>
+    ©︎naepro
+  </footer>
+</body>
+<script>
+  let target = document.querySelectorAll(".observer"),
+    options = {rootMargin:"-30%",threshold:.3},
+    observer = new IntersectionObserver(
+      function(e){
+        e.forEach(
+          function(e){
+            if (e.isIntersecting){
+              // document.body.id = e.target.id+"-body";
+              e.target.classList.add( "noopacity" );
+            } else {
+              e.target.classList.remove( "noopacity" );
+            }
+          }
+        )
+      },options
+    );
+  target.forEach(function(e){
+    observer.observe(e);
+  });;
+
+</script>
+</html>

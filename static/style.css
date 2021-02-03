@@ -342,8 +342,8 @@ nav li {
   max-width: 800px;
 }
 
-#one,
-#two p {
+#top #one,
+#top #two p {
   scroll-snap-align: start;
   height: 100vh;
 }
@@ -382,10 +382,6 @@ h4 {
 
 #one {
   padding: 4.5rem;
-}
-
-#top #one {
-  height: 100vh;
 }
 
 #one {

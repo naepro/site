@@ -1,3 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "ja"
 title = "苗ぷろ"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

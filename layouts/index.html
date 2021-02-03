@@ -18,7 +18,6 @@
         </div>
       </section>
       <section id=two>
-        <div>
           <p class="observer big">
             「やりたいこと」
           </p>
@@ -40,9 +39,8 @@
             苗ぷろ。という自由なラボラトリーで<br>
             私たちと一緒に、自分の人生をデザインできる女性に
           </p>
-        </div>
       </section>
-    <section id=three>
+    <section id=three class="observer">
       <section>
         <h2>About us</h2>
         <p>
@@ -53,20 +51,20 @@
         </p>
         <div id="MVV">
           <div>
-            <h4>Mission</h4>
+            <h3>Mission</h3>
             <p>「自分の人生をデザインできる女性を増やす」</p>
           </div>
           <div>
-            <h4>Vison</h4>
+            <h3>Vison</h3>
             <p>「女子大生の一歩を創るラボラトリ」</p>
           </div>
           <div>
-            <h4>Value</h4>
+            <h3>Value</h3>
             <p>「Wellness と向き合う」<br>
               「自分発社会着」「リーダーシップを持つ」</p>
           </div>
         </div>
-        <h3>ウェルネスとは</h3>
+        <h2>ウェルネスとは</h2>
         <p>
           ”ウェルネス”は世界保健機関 (WHO) が
           国際的に提示した、新しい「健康」の定義です。
@@ -74,8 +72,8 @@
           苗ぷろ。の活動は、
           ”ウェルネス”という考え方を軸にしています。
         </p>
-        <h3>苗ぷろ独自の<br>ウェルネスの再定義</h3>
-        <h3>ロゴ</h3>
+        <h2>苗ぷろ独自の<br>ウェルネスの再定義</h2>
+        <h2>ロゴ</h2>
       </section>
     </section>
   </main>
@@ -85,13 +83,13 @@
 </body>
 <script>
   let target = document.querySelectorAll(".observer"),
-    options = {rootMargin:"-30%",threshold:.3},
+    options = {rootMargin:"0",threshold:.2},
     observer = new IntersectionObserver(
       function(e){
         e.forEach(
           function(e){
             if (e.isIntersecting){
-              // document.body.id = e.target.id+"-body";
+              document.body.id = e.target.id+"-body";
               e.target.classList.add( "noopacity" );
             } else {
               e.target.classList.remove( "noopacity" );

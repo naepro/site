@@ -12,12 +12,12 @@
 <body ontouchstart>
   {{ partial "header.html" . }}
   <main>
-      <section id=one >
+      <section id=one class="observer">
         <div>
           女子学生に<br>ウェルネスを
         </div>
       </section>
-    <section id=three>
+    <section id=three class="observer">
       <section>
         <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
         {{ .Content }}
@@ -30,13 +30,13 @@
 </body>
 <script>
   let target = document.querySelectorAll(".observer"),
-    options = {rootMargin:"-30%",threshold:.3},
+    options = {rootMargin:"0",threshold:.2},
     observer = new IntersectionObserver(
       function(e){
         e.forEach(
           function(e){
             if (e.isIntersecting){
-              // document.body.id = e.target.id+"-body";
+              document.body.id = e.target.id+"-body";
               e.target.classList.add( "noopacity" );
             } else {
               e.target.classList.remove( "noopacity" );

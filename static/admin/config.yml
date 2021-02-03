@@ -9,4 +9,18 @@ collections:
       - {label: "タイトル", name: "title", widget: "string"}
       - {label: "公開日", name: "date", widget: "datetime"}
       - {label: "本文", name: "body", widget: "markdown"}
-media_folder: "static/images"
+  - label: "Member" # 管理画面のサイドバーで使う
+    name: "member" # 管理画面のパスで使う　例：/admin/collections/blog
+    folder: "content/member" # Markdownを保存するディレクトリ。Hugoのsectionにあたる
+    fields: # ページ作成画面で使う。Front Matterの値を書く
+      - {label: "タイトル", name: "title", widget: "string"}
+      - {label: "公開日", name: "date", widget: "datetime"}
+      - {label: "本文", name: "body", widget: "markdown"}
+  - label: "Project" # 管理画面のサイドバーで使う
+    name: "project" # 管理画面のパスで使う　例：/admin/collections/blog
+    folder: "content/project" # Markdownを保存するディレクトリ。Hugoのsectionにあたる
+    fields: # ページ作成画面で使う。Front Matterの値を書く
+      - {label: "タイトル", name: "title", widget: "string"}
+      - {label: "公開日", name: "date", widget: "datetime"}
+      - {label: "本文", name: "body", widget: "markdown"}
+media_folder: "/images"

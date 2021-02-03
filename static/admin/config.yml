@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: main
+locale: 'ja'
 collections:
   - label: "About" # 管理画面のサイドバーで使う
     name: "about" # 管理画面のパスで使う　例：/admin/collections/blog
